@@ -27,6 +27,11 @@ Este proyecto consiste en un sistema de inventario con una arquitectura de front
 - NPM o Yarn
 - MySQL instalado y en ejecución
 
+- Configuración de la Base de Datos
+
+Crear la base de datos:
+CREATE DATABASE api_db;
+
 ### Configuración del Backend (API)
 
 1. Navegar al directorio de la API:
