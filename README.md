@@ -123,41 +123,6 @@ La forma más directa de ver los tokens durante el desarrollo es revisar los log
    tail -f storage/logs/laravel.log
    ```
 
-### Configuración Importante para el Frontend
-
-Para que Sanctum funcione correctamente con tu frontend React, asegúrate de configurar axios:
-
-```javascript
-// En tu archivo de configuración de axios
-import axios from 'axios';
-
-// Configuración crucial para Sanctum
-axios.defaults.withCredentials = true;
-```
-
-### En el Backend (Laravel)
-
-1. **Verificar la Configuración de Sanctum**:
-   - Asegúrate de que el archivo `config/sanctum.php` tenga la configuración correcta:
-   ```php
-   'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', sprintf(
-       '%s%s',
-       'localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1',
-       env('APP_URL') ? ','.parse_url(env('APP_URL'), PHP_URL_HOST) : ''
-   ))),
-   ```
-
-2. **Ruta de Prueba**:
-   - Puedes añadir una ruta de prueba para verificar tokens en Laravel:
-   ```php
-   // En routes/api.php
-   Route::middleware('auth:sanctum')->get('/check-auth', function (Request $request) {
-       return [
-           'message' => 'Autenticado correctamente',
-           'user' => $request->user(),
-       ];
-   });
-   ```
 
 ## Características
 
