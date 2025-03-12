@@ -29,7 +29,7 @@ Este proyecto consiste en un sistema de inventario con una arquitectura de front
 
 - Configuración de la Base de Datos
 
-Crear la base de datos:
+### Crear la base de datos:
 CREATE DATABASE api_db;
 
 ### Configuración del Backend (API)
