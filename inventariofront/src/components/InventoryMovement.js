@@ -270,7 +270,7 @@ const InventoryMovement = () => {
                         </Row>
 
                         <div className="d-flex justify-content-between mt-4">
-                           <Link to="/" className="btn btn-secondary px-4">
+                           <Link to="/show" className="btn btn-secondary px-4">
                               Volver a Productos
                            </Link>
                            <Button

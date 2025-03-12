@@ -33,7 +33,7 @@ const CreateProduct = () => {
             price: price,
             stock: stock,
          });
-         navigate("/");
+         navigate("/show");
       } catch (error) {
          console.error("Error creating product:", error);
          setError(

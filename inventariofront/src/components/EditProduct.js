@@ -34,7 +34,7 @@ const EditProduct = () => {
             price: price,
             // No enviamos el stock para que no se actualice desde aquí
          });
-         navigate("/");
+         navigate("/show");
       } catch (error) {
          console.error("Error updating product:", error);
          setError(
@@ -137,7 +137,7 @@ const EditProduct = () => {
                   </Form.Group>
 
                   <div className="d-flex justify-content-between mt-4">
-                     <Link to="/" className="btn btn-secondary">
+                     <Link to="/show" className="btn btn-secondary">
                         <FaArrowLeft className="me-2" /> Volver
                      </Link>
                      <Button
